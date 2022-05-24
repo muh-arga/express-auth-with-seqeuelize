@@ -6,7 +6,7 @@ async function assertDatabaseConnectionOk() {
     console.log('Checking database connection...')
     try {
         await sequelize.authenticate()
-        await sequelize.sync({alter: true})
+        await sequelize.sync()
         console.log('Database connection OK!! 🚀🚀')
     } catch (error) {
         console.log('Unable to connect to the database')
